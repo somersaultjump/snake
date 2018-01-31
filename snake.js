@@ -33,7 +33,7 @@ function snake() {
 	}
 	
 	this.show = function() {
-		stroke(20,122,20);
+		stroke(60,122,60);
 		fill(20,122,20);
 		for (var i = 0; i < this.tail.length; i++) {
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
@@ -44,8 +44,22 @@ function snake() {
 	}
 	
 	this.dir = function(x,y) {
-		this.xspeed = x;
-		this.yspeed = y;
+		// this.xspeed = x;
+		// this.yspeed = y;
+
+		if (this.xspeed === -1 && x === 1) {
+
+		} else if (this.xspeed === 1 && x === -1) {
+
+		} else if (this.yspeed === -1 && y === 1) {
+			
+		} else if (this.yspeed === 1 && y === -1) {
+
+		} else {
+			this.xspeed = x;
+			this.yspeed = y;
+		}
+
 	}
 
 	this.death = function() {
@@ -53,17 +67,18 @@ function snake() {
 			var pos = this.tail[i];
 			var d = dist(this.x, this.y, pos.x, pos.y);
 			if (d < 1) {
-				this.total = 0;
-				this.tail = [];
+				setup();
 			}
 		}
-		// if ((this.x === (0 || width)) || (this.y === (0 || height))) {
-		// 	this.total = 0;
-		// 	this.tail = [];
-		// 	window.alert("hit the wall");
-		// }
-	}
 
+		if (this.x < scl || this.x > width-scl) {
+			setup();
+		}
+
+		if (this.y < scl || this.y > height-scl) {
+			setup();
+		}
+	}
 }
 
 

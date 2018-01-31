@@ -20,6 +20,18 @@ function pickLocation() {
 	food.mult(scl);
 }
 
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+		s.dir(0, -1);
+	} else if (keyCode === RIGHT_ARROW) {
+		s.dir(1, 0);
+	} else if (keyCode === DOWN_ARROW) {
+		s.dir(0, 1);
+	} else if (keyCode === LEFT_ARROW) {
+		s.dir(-1, 0);
+	}
+}
+
 function draw() { 
   background(25);
 
@@ -45,15 +57,5 @@ function draw() {
 	rect(0,height-scl,600,scl); // bottom
 }
 
-function keyPressed() {
-	if (keyCode === UP_ARROW) {
-		s.dir(0, -1);
-	} else if (keyCode === RIGHT_ARROW) {
-		s.dir(1, 0);
-	} else if (keyCode === DOWN_ARROW) {
-		s.dir(0, 1);
-	} else if (keyCode === LEFT_ARROW) {
-		s.dir(-1, 0);
-	}
-}
+
 
