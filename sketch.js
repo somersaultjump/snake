@@ -32,15 +32,17 @@ function draw() {
 	s.show();
 
 	fill(255, 0, 0);
+	stroke(255,0,0);
 	rect(food.x, food.y, scl, scl);
 
+	// The border
 	var bc = random(100,200);
 	fill(bc,0,0);
 	stroke(color(bc,0,0));
-	rect(0,0,scl,600); //left
-	rect(width-scl,0,scl,600); //right
-	rect(0,0,600,scl); //top
-	rect(0,height-scl,600,scl); //bottom
+	rect(0,0,scl,600); // left
+	rect(width-scl,0,scl,600); // right
+	rect(0,0,600,scl); // top
+	rect(0,height-scl,600,scl); // bottom
 }
 
 function keyPressed() {

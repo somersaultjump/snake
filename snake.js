@@ -33,12 +33,13 @@ function snake() {
 	}
 	
 	this.show = function() {
-		fill(255);
+		stroke(20,122,20);
+		fill(20,122,20);
 		for (var i = 0; i < this.tail.length; i++) {
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
 		}
 
-		fill(255)
+		fill(20,122,20);
 		rect(this.x, this.y, scl, scl);
 	}
 	
