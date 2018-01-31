@@ -55,6 +55,7 @@ function draw() {
 	rect(width-scl,0,scl,600); // right
 	rect(0,0,600,scl); // top
 	rect(0,height-scl,600,scl); // bottom
+
 }
 
 

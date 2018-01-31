@@ -52,7 +52,7 @@ function snake() {
 		} else if (this.xspeed === 1 && x === -1) {
 
 		} else if (this.yspeed === -1 && y === 1) {
-			
+
 		} else if (this.yspeed === 1 && y === -1) {
 
 		} else {
@@ -71,11 +71,11 @@ function snake() {
 			}
 		}
 
-		if (this.x < scl || this.x > width-scl) {
+		if (this.x < scl || this.x > (width-scl)-1) {
 			setup();
 		}
 
-		if (this.y < scl || this.y > height-scl) {
+		if (this.y < scl || this.y > (height-scl)-1) {
 			setup();
 		}
 	}
