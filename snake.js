@@ -1,7 +1,7 @@
 function snake() {
-	this.x = 0;
-	this.y = 0;
-	this.xspeed = 1;
+	this.x = width/2;
+	this.y = height/2;
+	this.xspeed = 0;
 	this.yspeed = 0;
 	this.total = 0;
 	this.tail = [];
@@ -56,6 +56,11 @@ function snake() {
 				this.tail = [];
 			}
 		}
+		// if ((this.x === (0 || width)) || (this.y === (0 || height))) {
+		// 	this.total = 0;
+		// 	this.tail = [];
+		// 	window.alert("hit the wall");
+		// }
 	}
 
 }

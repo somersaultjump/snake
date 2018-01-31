@@ -8,17 +8,21 @@ function setup() {
 	frameRate(10);
 	pickLocation();
 
+
+
 } 
 
 function pickLocation() {
 	var cols = floor(width/scl);
 	var rows = floor(height/scl);
-	food = createVector(floor(random(cols)), floor(random(rows)));
+	// console.log(cols,rows);
+	food = createVector(floor(random(1,cols-1)), floor(random(1,rows-1)));
 	food.mult(scl);
 }
 
 function draw() { 
   background(25);
+
 
   	if (s.eat(food)) {
 		pickLocation();
@@ -29,6 +33,14 @@ function draw() {
 
 	fill(255, 0, 0);
 	rect(food.x, food.y, scl, scl);
+
+	var bc = random(100,200);
+	fill(bc,0,0);
+	stroke(color(bc,0,0));
+	rect(0,0,scl,600); //left
+	rect(width-scl,0,scl,600); //right
+	rect(0,0,600,scl); //top
+	rect(0,height-scl,600,scl); //bottom
 }
 
 function keyPressed() {
